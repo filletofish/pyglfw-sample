@@ -7,8 +7,19 @@ Script displays red rotating square with next key bindings:
 * DOWN - moves square down
 * ESC - closes the window
 
-
+### Required libraries:
+ * PYGLFW
+ 
+ ```
+$ pip3 install pyglfw
+ ```
+ * OpenGL
+ 
+ ```
+$ pip install PyOpenGL PyOpenGL_accelerate
+ ```
+ 
 ### Launching
 ```
-python3 main.py
+$ python3 main.py
 ```

@@ -11,9 +11,6 @@ class Color():
 
 color = Color()
 
-# KEY_DOWN = 264
-# KEY_UP = 265
-
 def on_key(window, key, scancode, action, mods):
     global d_x
     global color
@@ -72,10 +69,10 @@ def main():
         gl.glMatrixMode(gl.GL_PROJECTION)
         gl.glLoadIdentity()
         gl.glOrtho(-ratio, ratio, -1, 1, 1, -1)
+
         # Select and setup the modelview matrix
         gl.glMatrixMode(gl.GL_MODELVIEW)
         gl.glLoadIdentity()
-
         gl.glRotatef(rotation_angle, 0, 0, 1)
         gl.glBegin(gl.GL_POLYGON)
         gl.glColor3f(color.red, color.green, color.blue)
@@ -95,6 +92,7 @@ def main():
         glfw.poll_events()
 
     # terminating the whole proccess
+    glfw.destroy_window(window)
     glfw.terminate()
 
 
